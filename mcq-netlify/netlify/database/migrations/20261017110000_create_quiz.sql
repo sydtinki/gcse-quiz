@@ -33,29 +33,29 @@ INSERT INTO questions
  'x = 3', 'x = 5', 'x = 7', 'x = 9', 'B',
  'Subtract 7 from both sides: 3x = 15. Divide by 3: x = 5.'),
 
-(2, 'Percentages', 'A jacket costs £80. Its price is reduced by 25%. What is the sale price?',
- '£20', '£55', '£60', '£65', 'C',
- '25% of £80 is £20. Sale price = £80 - £20 = £60.'),
+(2, 'Percentages', U&'A jacket costs \00A380. Its price is reduced by 25%. What is the sale price?',
+ U&'\00A320', U&'\00A355', U&'\00A360', U&'\00A365', 'C',
+ U&'25% of \00A380 is \00A320. Sale price = \00A380 \2212 \00A320 = \00A360.'),
 
 (3, 'Fractions', 'Calculate: 2/3 + 1/6',
  '3/9', '1/2', '5/6', '3/6', 'C',
  'Convert 2/3 to 4/6. Then 4/6 + 1/6 = 5/6.'),
 
-(4, 'Geometry', 'A triangle has angles of 45° and 65°. Find the third angle.',
- '60°', '70°', '80°', '90°', 'B',
- 'Angles in a triangle add up to 180°. So 180° - 45° - 65° = 70°.'),
+(4, 'Geometry', U&'A triangle has angles of 45\00B0 and 65\00B0. Find the third angle.',
+ U&'60\00B0', U&'70\00B0', U&'80\00B0', U&'90\00B0', 'B',
+ U&'Angles in a triangle add up to 180\00B0. So 180\00B0 \2212 45\00B0 \2212 65\00B0 = 70\00B0.'),
 
-(5, 'Ratio', 'Divide £60 in the ratio 2:3. What is the larger share?',
- '£20', '£24', '£30', '£36', 'D',
- 'There are 5 parts altogether. £60 ÷ 5 = £12 per part. The larger share is 3 × £12 = £36.'),
+(5, 'Ratio', U&'Divide \00A360 in the ratio 2:3. What is the larger share?',
+ U&'\00A320', U&'\00A324', U&'\00A330', U&'\00A336', 'D',
+ U&'There are 5 parts altogether. \00A360 \00F7 5 = \00A312 per part. The larger share is 3 \00D7 \00A312 = \00A336.'),
 
 (6, 'Probability', 'A fair six-sided die is rolled once. What is the probability of getting an even number?',
  '1/6', '1/3', '1/2', '2/3', 'C',
  'The even outcomes are 2, 4 and 6. Probability = 3/6 = 1/2.'),
 
 (7, 'Area', 'A rectangle has a length of 12 cm and a width of 5 cm. Calculate its area.',
- '17 cm²', '34 cm²', '60 cm²', '120 cm²', 'C',
- 'Area = length × width = 12 × 5 = 60 cm².'),
+ U&'17 cm\00B2', U&'34 cm\00B2', U&'60 cm\00B2', U&'120 cm\00B2', 'C',
+ U&'Area = length \00D7 width = 12 \00D7 5 = 60 cm\00B2.'),
 
 (8, 'Sequences', 'Find the next number: 4, 7, 10, 13, ___',
  '15', '16', '17', '18', 'B',
@@ -63,8 +63,8 @@ INSERT INTO questions
 
 (9, 'Mean (Average)', 'Find the mean of 6, 8, 10, 12 and 14.',
  '8', '9', '10', '12', 'C',
- 'Mean = (6 + 8 + 10 + 12 + 14) ÷ 5 = 50 ÷ 5 = 10.'),
+ U&'Mean = (6 + 8 + 10 + 12 + 14) \00F7 5 = 50 \00F7 5 = 10.'),
 
 (10, 'Pythagoras'' Theorem', 'A right-angled triangle has shorter sides of 6 cm and 8 cm. Find the hypotenuse.',
  '9 cm', '10 cm', '12 cm', '14 cm', 'B',
- 'c² = 6² + 8² = 36 + 64 = 100, so c = v100 = 10 cm.');
+ U&'c\00B2 = 6\00B2 + 8\00B2 = 36 + 64 = 100, so c = \221A100 = 10 cm.');
