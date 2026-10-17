@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GCSE Mathematics Quiz</title>
+  <link rel="stylesheet" href="/assets/style.css">
+</head>
+<body>
+  <main class="card">
+    <h1>GCSE Mathematics Quiz</h1>
+
+    <!-- Start -->
+    <section id="start-screen">
+      <p class="muted">10 multiple-choice questions. Choose one answer (A, B, C or D) for each.</p>
+      <form id="start-form">
+        <label for="player-name">Your name</label>
+        <input id="player-name" type="text" maxlength="100" placeholder="Enter your name" required>
+        <button class="btn primary" type="submit">Start quiz</button>
+        <p id="start-error" class="error" role="alert"></p>
+      </form>
+    </section>
+
+    <!-- Quiz -->
+    <section id="quiz-screen" hidden>
+      <div class="progress-meta">
+        <span id="progress-text"></span>
+        <span id="q-topic" class="badge"></span>
+      </div>
+      <div class="progress"><div id="progress-bar"></div></div>
+
+      <h2 id="q-text"></h2>
+      <div id="options" class="options"></div>
+
+      <p id="quiz-error" class="error" role="alert"></p>
+      <div class="actions">
+        <button id="prev-btn" class="btn" type="button">Previous</button>
+        <button id="next-btn" class="btn primary" type="button">Next</button>
+        <button id="submit-btn" class="btn primary" type="button" hidden>Submit answers</button>
+      </div>
+    </section>
+
+    <!-- Results -->
+    <section id="result-screen" hidden>
+      <div class="score-box">
+        <div id="score-text" class="score"></div>
+        <div id="score-percent" class="muted"></div>
+        <p id="score-feedback" class="feedback"></p>
+      </div>
+      <h2>Review</h2>
+      <div id="review"></div>
+      <button id="retry-btn" class="btn primary" type="button">Try again</button>
+    </section>
+  </main>
+
+  <script src="/assets/script.js"></script>
+</body>
+</html>

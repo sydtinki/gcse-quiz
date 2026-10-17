@@ -1,0 +1,9 @@
+{
+  "name": "mcq-netlify",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "@netlify/database": "latest",
+    "pg": "^8.11.0"
+  }
+}
