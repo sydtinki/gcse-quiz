@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>Admin - GCSE Mathematics Quizzes</title>
+  <link rel="stylesheet" href="/assets/style.css">
+</head>
+<body>
+  <main class="card wide">
+    <h1>Admin</h1>
+
+    <!-- Unlock -->
+    <section id="unlock-section">
+      <p class="muted">Enter the admin password to manage student accounts.</p>
+      <form id="unlock-form">
+        <label for="admin-password">Admin password</label>
+        <input id="admin-password" type="password" autocomplete="off" required>
+        <button class="btn primary" type="submit">Unlock</button>
+        <p id="unlock-error" class="error" role="alert"></p>
+      </form>
+    </section>
+
+    <!-- Panel -->
+    <section id="panel" hidden>
+      <h2>Create student accounts</h2>
+      <p class="muted">One account per line, written as <strong>username,password</strong> (up to 50 lines at a time).
+        Accounts work only until 31 December of the year they are created.</p>
+      <form id="create-form">
+        <textarea id="lines" rows="6" placeholder="thabo.m,Maths2026&#10;neo.k,Quiz2026pass" spellcheck="false"></textarea>
+        <button class="btn primary" type="submit">Create accounts</button>
+        <p id="create-msg" class="notice" role="status"></p>
+        <ul id="create-problems" class="problems"></ul>
+      </form>
+
+      <h2>Accounts</h2>
+      <div class="table-wrap">
+        <table id="users-table">
+          <thead>
+            <tr><th>Username</th><th>Year created</th><th>Status</th><th>Device</th><th></th></tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+      <p id="users-error" class="error" role="alert"></p>
+    </section>
+  </main>
+
+  <script src="/assets/admin.js"></script>
+</body>
+</html>
