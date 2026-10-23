@@ -3,26 +3,46 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>GCSE Mathematics Quiz</title>
+  <title>GCSE Mathematics Quizzes</title>
   <link rel="stylesheet" href="/assets/style.css">
 </head>
 <body>
-  <main class="card">
-    <h1>GCSE Mathematics Quiz</h1>
+  <header id="topbar" class="topbar" hidden>
+    <span id="who" class="muted"></span>
+    <nav>
+      <button id="home-btn" class="btn small" type="button">Home</button>
+      <button id="logout-btn" class="btn small" type="button">Log out</button>
+    </nav>
+  </header>
 
-    <!-- Start -->
-    <section id="start-screen">
-      <p class="muted">10 multiple-choice questions. Choose one answer (A, B, C or D) for each.</p>
-      <form id="start-form">
-        <label for="player-name">Your name</label>
-        <input id="player-name" type="text" maxlength="100" placeholder="Enter your name" required>
-        <button class="btn primary" type="submit">Start quiz</button>
-        <p id="start-error" class="error" role="alert"></p>
+  <main class="card">
+    <h1>GCSE Mathematics Quizzes</h1>
+
+    <p id="loading-screen" class="muted">Loading...</p>
+
+    <!-- Login -->
+    <section id="login-screen" hidden>
+      <p class="muted">Log in with the username and password given to you by your school.</p>
+      <form id="login-form">
+        <label for="username">Username</label>
+        <input id="username" type="text" autocomplete="username" autocapitalize="none" required>
+        <label for="password">Password</label>
+        <input id="password" type="password" autocomplete="current-password" required>
+        <button id="login-btn" class="btn primary" type="submit">Log in</button>
+        <p id="login-error" class="error" role="alert"></p>
       </form>
+    </section>
+
+    <!-- Quiz list (home page after login) -->
+    <section id="list-screen" hidden>
+      <p class="muted">Choose a quiz to begin.</p>
+      <ol id="quiz-list" class="quiz-list"></ol>
+      <p id="list-error" class="error" role="alert"></p>
     </section>
 
     <!-- Quiz -->
     <section id="quiz-screen" hidden>
+      <h2 id="quiz-title" class="quiz-title"></h2>
       <div class="progress-meta">
         <span id="progress-text"></span>
         <span id="q-topic" class="badge"></span>
@@ -43,13 +63,22 @@
     <!-- Results -->
     <section id="result-screen" hidden>
       <div class="score-box">
+        <div id="result-title" class="muted"></div>
         <div id="score-text" class="score"></div>
         <div id="score-percent" class="muted"></div>
         <p id="score-feedback" class="feedback"></p>
       </div>
+
+      <div id="by-topic" class="by-topic" hidden></div>
+
       <h2>Review</h2>
+      <label class="check"><input id="only-wrong" type="checkbox"> Show only questions I got wrong</label>
       <div id="review"></div>
-      <button id="retry-btn" class="btn primary" type="button">Try again</button>
+
+      <div class="actions">
+        <button id="retry-btn" class="btn" type="button">Retake this quiz</button>
+        <button id="back-btn" class="btn primary" type="button">Back to all quizzes</button>
+      </div>
     </section>
   </main>
 
